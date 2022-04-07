@@ -1,0 +1,28 @@
+
+
+<div class="container">
+    <h1 class="text-center">Template-form</h1>
+
+<form #loginForm="ngForm" (submit)="login(loginForm)">
+    <input type="text" placeholder="Username" class="form-control" name="username" [(ngModel)]="username" required>
+    <br>
+    <input type="password" placeholder="password" class="form-control" name="password" [(ngModel)]="password" minlength="10" required>
+    <br>
+    <select name="memberType" [(ngModel)]="memberType">
+        <option value="permanent member" >permanent member</option>
+        <option value="local member" >local member</option>
+    </select>
+    <br>
+    <textarea name="textarea" placeholder="Write your message here" cols="30" rows="10" [(ngModel)]="textarea"></textarea>
+    <br>
+    <div class="check">   <input type="checkbox" required class="form-control" name="checkbox" [(ngModel)]="checkbox">
+        <div>Accept Terms & Condition</div>
+    </div>
+ 
+        <br>
+    <button type="submit" [disabled]="!loginForm.valid"> signup</button>
+    <button class="reset" (click)="reset(loginForm)">Reset</button>
+    <button class="load" (click)="loadValues(loginForm)">Set Values</button>
+
+</form>
+</div>

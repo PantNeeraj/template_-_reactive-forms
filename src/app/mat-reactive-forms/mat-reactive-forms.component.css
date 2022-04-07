@@ -1,0 +1,45 @@
+mat-card{
+    background-color: rgb(226, 241, 90);
+}
+mat-card-title{
+    text-align: center;
+    color:brown;
+}
+.container{
+    width: 60%;
+    min-height: 100vh;
+    margin: auto;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+mat-form-field{
+    display: block;
+}
+div button{
+    margin-right: 15px;
+}
+.btn{
+    margin-top: 20px;
+}
+textarea.mat-input-element{
+    overflow: hidden;
+}
+form{
+    padding: 20px;
+    
+}
+button:last-child{
+    background-color: greenyellow;
+    color: rgb(189, 53, 53);
+}
+.inline mat-form-field{
+    display: inline-block;
+    width: 40%;
+}
+.inline{
+    display: flex;
+    justify-content: space-between;
+}
+.cc{
+    width: 80px !important;
+}

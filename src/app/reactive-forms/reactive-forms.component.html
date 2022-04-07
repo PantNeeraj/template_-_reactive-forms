@@ -1,0 +1,54 @@
+<div class="container">
+  <h1 class="text-center">Reactive-form</h1>
+  input username is:
+  <span style="color: blueviolet"> {{ dataa?.username }}</span>
+  <br />
+  input password is:<span style="color: blueviolet">
+    {{ dataa?.password }}</span
+  >
+  <br />
+  member is :<span style="color: blueviolet"> {{ dataa?.memberType }}</span>
+
+  <form [formGroup]="loginForm">
+    <input
+      type="text"
+      placeholder="Username"
+      class="form-control"
+      formControlName="username"
+    />
+
+    <br />
+    <input
+      type="password"
+      placeholder="password"
+      class="form-control"
+      formControlName="password"
+    />
+    <br />
+    <select formControlName="memberType">
+      <option value="permanent member">permanent member</option>
+      <option value="local member">local member</option>
+    </select>
+    <br />
+    <textarea
+      formControlName="textarea"
+      placeholder="Write your message here"
+      cols="30"
+      rows="10"
+    ></textarea>
+    <br />
+    <div class="check">
+      <input type="checkbox" class="form-control" formControlName="checkbox" />
+      <div>Accept Terms & Condition</div>
+    </div>
+
+    <br />
+    <button type="submit" (click)="onSubmit()" [disabled]="loginForm.invalid">
+      signup
+    </button>
+    <button class="reset" (click)="reset()">Reset</button>
+    <button class="load" (click)="loadValues()">Set Values</button>
+  </form>
+</div>
+
+
